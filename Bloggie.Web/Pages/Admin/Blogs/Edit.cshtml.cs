@@ -21,7 +21,7 @@ namespace Bloggie.Web.Pages.Admin.Blogs
             BlogPost = bloggieDbContext.BlogPosts.Find(id);
 
         }
-        public void OnPost() 
+        public IActionResult OnPost() 
         {
             var existingBlogPost = bloggieDbContext.BlogPosts.Find(BlogPost.Id);
             if (existingBlogPost != null) 
